@@ -23,12 +23,14 @@ const socialLinks = [
 ];
 
 function Sidebar() {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <aside className="top-4 h-fit rounded-[2rem] border border-[var(--border-soft)] bg-[var(--panel)] p-5 shadow-2xl shadow-black/15 lg:fixed lg:w-80">
       <div className="flex flex-col gap-6">
         <div className="flex items-center gap-4 lg:flex-col lg:items-start">
           <img
-            src="/profile-photo.png"
+            src={`${assetBase}profile-photo.png`}
             alt="Kaiwalya Ladkhedkar"
             className="h-24 w-24 rounded-[1.75rem] border border-blue-400/30 object-cover shadow-lg shadow-blue-500/10"
           />
@@ -95,7 +97,7 @@ function Sidebar() {
         </div>
 
         <a
-          href="/resume.pdf"
+          href={`${assetBase}resume.pdf`}
           download
           className="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-400"
         >

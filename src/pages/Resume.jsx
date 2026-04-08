@@ -83,6 +83,8 @@ function Timeline({ items }) {
 }
 
 function Resume() {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <section className="space-y-8 py-4">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -96,7 +98,7 @@ function Resume() {
         </div>
 
         <a
-          href="/resume.pdf"
+          href={`${assetBase}resume.pdf`}
           download
           className="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-400"
         >
